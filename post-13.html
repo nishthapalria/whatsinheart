@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 Reasons You Need To Be A Girl's Girl (And If You're Not, You're The Problem) — Heart Talks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Heart Talks</h1>
+    <p>Exploring the quite, complicated parts of being human</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill" href="index.html#sec-self-improvement">Self Improvement</a>
+      <a class="genre-pill active" href="index.html#sec-feminism">Feminism</a>
+      <a class="genre-pill" href="index.html#sec-beauty">Beauty</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill" href="index.html#sec-health">Health</a>
+      <a class="genre-pill" href="index.html#sec-career">Career</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp"><div class="stamp-inner"><b>Jun 03</b>2026</div></div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 13 · <a href="index.html?genre=Feminism" style="color:inherit;">Feminism</a></div>
+    <div class="entry">
+      <h1 class="post-title">12 Reasons You Need To Be A Girl's Girl (And If You're Not, You're The Problem)</h1>
+      <p class="dek">"I am not like other girls" is not the flex you think it is. You are like other girls. We all are. And that's the point.</p>
+
+      <p>Being a girl's girl isn't about friendship bracelets and brunch. It's about loyalty. It's about safety. It's about choosing women over male validation every single time. Here's what it actually looks like:</p>
+
+      <ol class="tactics">
+        <li><strong>You stop seeing other women as competition.</strong> Her promotion is not your demotion. Her glow-up doesn't dim your light.</li>
+        <li><strong>You guard her drink like it's your job.</strong> She wants to dance all night? Your job is to hold her purse, walk her to the bathroom, and make sure no creep tries anything. That's sisterhood.</li>
+        <li><strong>You hold her accountable because you actually care.</strong> Not tearing her down — but calling it when she's settling. "Girl, he's 32 and lives with his mom. You deserve better." That's love.</li>
+        <li><strong>You support her version of femininity, not just yours.</strong> Stay-at-home baker or CEO — you hype either. Not your job to get it. Support her anyway.</li>
+        <li><strong>You choose her safety over his ego, every damn time.</strong> Guy's being creepy at the bar? "Hey! She's with me." Doesn't matter if you know her. Girls protect girls.</li>
+        <li><strong>You tell the girlfriend — yes, even if he's your friend.</strong> The sisterhood comes before the bro code. You'd want to know if you were her.</li>
+        <li><strong>You hand out tampons if they run out.</strong> Bathroom stall solidarity is non-negotiable.</li>
+        <li><strong>You tell her about the spinach in her teeth.</strong> Quietly. Quickly. Before she walks into that meeting.</li>
+        <li><strong>You shut down the interrupters.</strong> "Sorry, she wasn't done. Continue." Amplify her voice.</li>
+        <li><strong>You decenter men, immediately.</strong> The less you perform for male approval, the happier you'll be. You're not the supporting character in his story. You're the whole plot.</li>
+        <li><strong>You realize you don't have to like her to have her back.</strong> This isn't about being besties with every woman. It's basic respect.</li>
+        <li><strong>You're done with pickme behavior.</strong> Putting other women down to make men like you is embarrassing for you. Strong women don't need to step on other women to feel tall.</li>
+      </ol>
+
+      <hr class="rule">
+
+      <p>The bottom line? After years of society pitting us against each other, choosing the sisterhood is a radical act.</p>
+      <blockquote class="kill-shot">A girl's girl doesn't choose a man's comfort over a woman's safety. Ever.</blockquote>
+      <p>So if you're still asking "am I a girl's girl?" — check yourself. If you do this stuff, you are. If you don't? Start now. We need you.</p>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-13";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-13";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Talks about self worth and emotional clarity</footer>
+</div>
+</body>
+</html>

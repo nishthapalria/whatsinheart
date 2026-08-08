@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Am Obsessed With Dharma Movies And If You're Not, You Need To Get Your Priorities Straight — Heart Talks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Heart Talks</h1>
+    <p>Exploring the quite, complicated parts of being human</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill" href="index.html#sec-self-improvement">Self Improvement</a>
+      <a class="genre-pill" href="index.html#sec-feminism">Feminism</a>
+      <a class="genre-pill" href="index.html#sec-beauty">Beauty</a>
+      <a class="genre-pill active" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill" href="index.html#sec-health">Health</a>
+      <a class="genre-pill" href="index.html#sec-career">Career</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp"><div class="stamp-inner"><b>Jun 03</b>2026</div></div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 12 · <a href="index.html?genre=Pop+Culture" style="color:inherit;">Pop Culture</a></div>
+    <div class="entry">
+      <h1 class="post-title">I Am Obsessed With Dharma Movies And If You're Not, You Need To Get Your Priorities Straight</h1>
+      <p class="dek">Let's get one thing straight: Dharma movies are not just movies. They're therapy. They're a blueprint.</p>
+
+      <p>They're the reason you think love should come with a violin solo and a rain sequence.</p>
+      <p>If you grew up believing your life should have a Yash Chopra filter, SRK monologues, and Alia Bhatt eyeliner, congratulations. You're my people.</p>
+      <p>And if you don't get it? Babe. We need to talk. Here's why being obsessed with Dharma movies is actually a personality trait:</p>
+
+      <h3 class="sub">1. You Don't Want a Boyfriend, You Want a Karan Johar Hero</h3>
+      <p>He doesn't just text "wyd." He shows up at the airport. He says "pyaar dosti hai" and actually means it. Your standards aren't high. Bollywood raised them.</p>
+
+      <h3 class="sub">2. You Think Every Fight Should End With a Monsoon</h3>
+      <p>Healthy communication? Sure. But also — where's the dramatic rain? The white kurta? The running-through-the-street-crying moment?</p>
+
+      <h3 class="sub">3. You've Planned Your Wedding Lehenga Since 2008</h3>
+      <p><em>Kabhi Khushi Kabhie Gham</em> ruined you. Now every family function is just an audition for your eventual grand entry. You don't walk into rooms. You descend the staircase. Chiffon dupatta mandatory.</p>
+
+      <h3 class="sub">4. You Believe in Delusional Self-Love Because Poo Did</h3>
+      <p>"It's my look, it's my style, and I love it." Poo was the first girl's girl. She was loyal, and would fight for her family in couture. If you're not channeling Poo energy at least once a week, what are you doing?</p>
+
+      <h3 class="sub">5. You Think Every Life Problem Can Be Solved With a Glow-Up Montage</h3>
+      <p>Heartbreak? New haircut plus a sad-then-triumphant song. Dharma taught us the algorithm: pain → makeup → comeback. And honestly? It works.</p>
+
+      <h3 class="sub">6. You're Not Crying, You're Just Hydrating Your Eyes for the Climax</h3>
+      <p>Dharma movies taught you that crying is cinematic. You let the tears fall while staring out a sunset window. Bonus points if the right song plays in your head.</p>
+
+      <h3 class="sub">7. You Know Your Worth Because Kajol Yelled It First</h3>
+      <p>"I'm beautiful, I'm smart, and don't you dare forget it." Every time a man tries to dim your light, you hear Kajol in your head. Dharma didn't just give us romance. It gave us rage. And lip liner.</p>
+
+      <hr class="rule">
+
+      <p>The bottom line? Being obsessed with Dharma movies isn't cringe. It's aspirational.</p>
+      <p>It means you want love that's loud. Friendships that are forever. Outfits that deserve their own song.</p>
+      <blockquote class="kill-shot">The world keeps telling you to be realistic. Dharma told you to be iconic.</blockquote>
+      <p>So wear the glitter. Demand the airport run. Cry in the rain. Your life deserves a soundtrack.</p>
+      <p><em>Now tell me: which Dharma movie raised you? I'll go first — Kal Ho Naa Ho taught me that even the messy parts deserve violins.</em></p>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-12";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-12";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Talks about self worth and emotional clarity</footer>
+</div>
+</body>
+</html>

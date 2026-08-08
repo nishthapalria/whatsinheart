@@ -3,28 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Which Indian Snack Are You, Based on Your Zodiac Sign + Mood — What's in Heart</title>
+<title>Which Indian Snack Are You, Based on Your Zodiac Sign + Mood — Heart Talks</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="sky">
 
-   <header class="site-head">
+  <header class="site-head">
     <span class="mark">est. 2026</span>
     <h1>Heart Talks</h1>
     <p>Exploring the quite, complicated parts of being human</p>
     <nav class="site-nav">
-      <a href="index.html" class="current">Entries</a>
+      <a href="index.html">Entries</a>
       <a href="about.html">About</a>
     </nav>
   </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill" href="index.html#sec-self-improvement">Self Improvement</a>
+      <a class="genre-pill" href="index.html#sec-feminism">Feminism</a>
+      <a class="genre-pill" href="index.html#sec-beauty">Beauty</a>
+      <a class="genre-pill active" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill" href="index.html#sec-health">Health</a>
+      <a class="genre-pill" href="index.html#sec-career">Career</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
+  </nav>
 
   <main class="page">
     <div class="stamp">
       <div class="stamp-inner"><b>Jun 07</b>2026</div>
     </div>
     <a class="back-link" href="index.html">← All entries</a>
-    <div class="entry-meta">Entry No. 6</div>
+    <div class="entry-meta">Entry No. 6 · <a href="index.html?genre=Pop+Culture" style="color:inherit;">Pop Culture</a></div>
     <div class="entry">
       <h1 class="post-title">Which Indian Snack Are You, Based on Your Zodiac Sign + Current Mood</h1>
       <p class="dek">Your sun sign decides the base flavor. Your mood decides the chutney. Together? You're a full thali of feelings.</p>
@@ -119,7 +132,7 @@
 
       <blockquote class="kill-shot">You're allowed to be a whole chaat counter. Humans aren't one-note. Neither are good snacks.</blockquote>
     </div>
-     <div class="engagement">
+    <div class="engagement">
   <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
 </div>
 
@@ -127,7 +140,7 @@
 <script>
     var disqus_config = function () {
         this.page.url = window.location.href;
-        this.page.identifier = "post-1";
+        this.page.identifier = "post-6";
     };
     (function() {
         var d = document, s = d.createElement('script');
@@ -153,7 +166,7 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
-  const postId = "post-1";
+  const postId = "post-6";
   const likeRef = ref(db, "likes/" + postId);
 
   onValue(likeRef, (snap) => {

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Only Weight Loss Funda You Actually Need: Eat Less, Move More — Heart Talks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Heart Talks</h1>
+    <p>Exploring the quite, complicated parts of being human</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill" href="index.html#sec-self-improvement">Self Improvement</a>
+      <a class="genre-pill" href="index.html#sec-feminism">Feminism</a>
+      <a class="genre-pill" href="index.html#sec-beauty">Beauty</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill active" href="index.html#sec-health">Health</a>
+      <a class="genre-pill" href="index.html#sec-career">Career</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp">
+      <div class="stamp-inner"><b>Jun 04</b>2026</div>
+    </div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 10 · <a href="index.html?genre=Health" style="color:inherit;">Health</a></div>
+    <div class="entry">
+      <h1 class="post-title">The Only Weight Loss Funda You Actually Need: Eat Less, Move More</h1>
+      <p class="dek">Let's kill the noise. Every diet book, 30-day challenge, and "what I eat in a day" TikTok is selling you the same engine with a different paint job.</p>
+
+      <p>The engine? Calorie deficit + regular workout. That's it. That's the funda.</p>
+
+      <h3 class="sub">1. Calorie Deficit: Math That Doesn't Care About Your Feelings</h3>
+      <p>Weight loss is thermodynamics, not witchcraft.</p>
+      <blockquote class="kill-shot">Calories In &lt; Calories Out = Weight Loss</blockquote>
+      <p>Your body burns a certain number of calories just existing — breathing, thinking, scrolling reels. That's your BMR. Add daily movement, and you get your TDEE. Eat less than that number consistently, and your body has no choice but to tap into stored fat.</p>
+      <p>No, "starvation mode" isn't why the scale stalled after weekend brunch. If you're not losing, you're not in a deficit. Period.</p>
+      <p><strong>The truth:</strong> you can't outsmart physics. Almonds are still calories. Tracking sucks less than staying stuck.</p>
+
+      <h3 class="sub">2. Regular Workout: The Non-Negotiable Multiplier</h3>
+      <p>Could you lose weight with diet alone? Technically, yes. Should you? Absolutely not.</p>
+      <p>Working out does three things a calorie deficit can't do alone.</p>
+      <p><strong>The truth:</strong> you don't need two-hour gym sessions. You need consistency. Thirty minutes of strength training three times a week plus daily steps will beat a random HIIT class you hate every time.</p>
+
+      <h3 class="sub">3. Why We Complicate This So Hard</h3>
+      <p>Because "simple" doesn't sell.</p>
+      <p>"Ketobiotic-carnivore-moon-cycle fasting" sells courses. "Track protein and walk more" doesn't. The industry thrives when you think you need a PhD in macros or a $200 supplement stack.</p>
+      <p><strong>Real talk checklist:</strong></p>
+      <ul class="tactics">
+        <li>Are you in a moderate calorie deficit?</li>
+        <li>Are you hitting your protein target?</li>
+        <li>Are you strength training a few times a week?</li>
+        <li>Are you walking daily?</li>
+      </ul>
+      <p>If yes → wait four weeks. If no → start there before buying anything.</p>
+
+      <hr class="rule">
+
+      <p><strong>The bottom line:</strong> weight loss isn't easy, but it is simple.</p>
+      <p>Calorie deficit takes the weight off. Regular workouts make sure it's the right weight, and that it stays off.</p>
+      <p>Everything else — meal timing, carb cycling, apple cider vinegar shots — is 1% optimization. Master the 99% first.</p>
+      <p>Stop majoring in the minors. Eat a bit less. Move a bit more. Repeat until you're done.</p>
+      <p><em>It's time to move.</em></p>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-10";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-10";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Talks about self worth and emotional clarity</footer>
+</div>
+</body>
+</html>

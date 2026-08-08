@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Long Way Home — Heart Talks</title>
+<title>The Crunch Factor: Rajasthani Chili Bites (Panko Style) — Heart Talks</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="sky">
-
   <header class="site-head">
     <span class="mark">est. 2026</span>
     <h1>Heart Talks</h1>
@@ -26,29 +25,39 @@
       <a class="genre-pill" href="index.html#sec-beauty">Beauty</a>
       <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
       <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
-      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill active" href="index.html#sec-food">Food</a>
       <a class="genre-pill" href="index.html#sec-health">Health</a>
       <a class="genre-pill" href="index.html#sec-career">Career</a>
-      <a class="genre-pill active" href="index.html#sec-life">Life</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
   </nav>
 
   <main class="page">
-    <div class="stamp">
-      <div class="stamp-inner"><b>Aug 08</b>2026</div>
-    </div>
+    <div class="stamp"><div class="stamp-inner"><b>May 11</b>2026</div></div>
     <a class="back-link" href="index.html">← All entries</a>
-    <div class="entry-meta">Entry No. 3 · <a href="index.html?genre=Life" style="color:inherit;">Life</a></div>
+    <div class="entry-meta">Entry No. 15 · <a href="index.html?genre=Food" style="color:inherit;">Food</a></div>
     <div class="entry">
-      <h1 class="post-title">The Long Way Home</h1>
-      <p class="dek">On taking the route that doesn't save any time.</p>
+      <h1 class="post-title">The Crunch Factor: Rajasthani Chili Bites (Panko Style)</h1>
+      <p class="dek">Forget the heavy besan batter of a traditional mirchi bada. This gives the Rajasthani classic an American tadka, using panko breadcrumbs for a lighter, shatteringly crisp finish.</p>
 
-      <p>There's a way home from the station that takes eleven minutes longer, and I've started taking it on purpose. It goes past the house with the impossible garden, the one that seems to grow a new thing every week whether or not the season agrees. Past the bakery that's never once been open when I've walked by, so that its interior has become a kind of rumor.</p>
+      <h3 class="sub">The Essentials</h3>
+      <ul class="tactics">
+        <li><strong>The peppers:</strong> 10–12 jalapeños, slit and deseeded</li>
+        <li><strong>The stuffing:</strong> mashed potatoes, cumin, amchur (mango powder), salt</li>
+        <li><strong>Upgrade:</strong> add shredded cheddar for a molten center</li>
+        <li><strong>The crust:</strong> a three-step station of seasoned flour, cornstarch slurry, and panko breadcrumbs</li>
+      </ul>
 
-      <p>The short way is fine. It's a straight line and a crosswalk and a hill that gets less interesting every time. The long way has no particular destination logic — it just wanders past things, in the way a conversation wanders when nobody's trying to make a point.</p>
+      <h3 class="sub">Quick Instructions</h3>
+      <ol class="tactics">
+        <li><strong>Stuff &amp; slice.</strong> Fill the chilies with the potato mix. Slice into 1-inch rounds or nuggets — this maximizes the crunch-to-chili ratio.</li>
+        <li><strong>The double crunch.</strong> Dredge in flour, dip in slurry, roll in panko. This creates an airy, bistro-style crust.</li>
+        <li><strong>Cook.</strong> Air fry at 200°C for 8–10 minutes with a light oil spray.</li>
+      </ol>
 
-      <p>I think I resisted this for a long time because it felt like wasting eleven minutes, and I was raised to believe minutes were a currency you shouldn't spend on nothing. But I've started to suspect the minutes aren't spent on nothing. They're spent on noticing — which is its own kind of arrival, even if it doesn't get you anywhere faster.</p>
+      <h3 class="sub">The Signature Dip</h3>
+      <p>Ditch the chutney. Mix mayo, sriracha, and lime for a desi-aioli that cuts through the heat and complements the crispy texture perfectly.</p>
 
-      <p>Yesterday the garden had put out something orange I didn't recognize. I don't know what it was. I didn't look it up. I just wanted, for eleven minutes, to be the kind of person who walks past a thing and lets it stay a small mystery.</p>
+      <blockquote class="kill-shot">Pro-tip: too spicy? Soak deseeded peppers in cold salt water for 10 minutes before stuffing to mellow them out.</blockquote>
     </div>
     <div class="engagement">
   <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
@@ -58,7 +67,7 @@
 <script>
     var disqus_config = function () {
         this.page.url = window.location.href;
-        this.page.identifier = "post-3";
+        this.page.identifier = "post-15";
     };
     (function() {
         var d = document, s = d.createElement('script');
@@ -84,7 +93,7 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
-  const postId = "post-3";
+  const postId = "post-15";
   const likeRef = ref(db, "likes/" + postId);
 
   onValue(likeRef, (snap) => {

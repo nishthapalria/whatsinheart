@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why I Actually Liked Call Me Bae (And No, I'm Not Complaining) — Heart Talks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky">
+  <header class="site-head">
+    <span class="mark">est. 2026</span>
+    <h1>Heart Talks</h1>
+    <p>Exploring the quite, complicated parts of being human</p>
+    <nav class="site-nav">
+      <a href="index.html">Entries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill" href="index.html#sec-self-improvement">Self Improvement</a>
+      <a class="genre-pill" href="index.html#sec-feminism">Feminism</a>
+      <a class="genre-pill" href="index.html#sec-beauty">Beauty</a>
+      <a class="genre-pill active" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill" href="index.html#sec-health">Health</a>
+      <a class="genre-pill" href="index.html#sec-career">Career</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
+  </nav>
+
+  <main class="page">
+    <div class="stamp"><div class="stamp-inner"><b>May 09</b>2026</div></div>
+    <a class="back-link" href="index.html">← All entries</a>
+    <div class="entry-meta">Entry No. 17 · <a href="index.html?genre=Pop+Culture" style="color:inherit;">Pop Culture</a></div>
+    <div class="entry">
+      <h1 class="post-title">Why I Actually Liked Call Me Bae (And No, I'm Not Complaining)</h1>
+      <p class="dek">Honestly, if you haven't watched it yet, we need to have a chat.</p>
+
+      <p>There are a lot of opinions floating around Ananya Panday's acting, but can I be real with you? I actually liked it.</p>
+      <p>This role feels like it was made for her. Her screen presence in this series is great, and her wardrobe? I wanted every single outfit.</p>
+      <p>The show takes us straight into a "richie rich" world, and while it looks like a fairy tale, the story is surprisingly believable. Whether it's the plan to marry a rich guy or the secret fling with a trainer, it feels like a reality that actually exists.</p>
+
+      <h3 class="sub">The Turning Point</h3>
+      <p>The drama starts when Bae gets caught with her trainer. What's interesting is how she handles it — she lives by that "physical infidelity isn't really cheating" logic. But then things get heavy. Her husband kicks her out, and when she turns to her own family, they shut the door. Not because they're deeply moral people — they just care about their media image.</p>
+
+      <h3 class="sub">Mumbai and the "Main Character" Energy</h3>
+      <p>Bae moves to Mumbai, going from luxury hotels to what basically looks like a girls' hostel. Most people would crumble. Not her. She stays in her element, keeps that main character energy through it all, and honestly? I'm not even complaining. It's kind of refreshing to see these sorts of characters once in a while.</p>
+      <p>She eventually makes a video that goes viral, and that's where the story really picks up.</p>
+
+      <h3 class="sub">The Supporting Cast</h3>
+      <p>Gurfateh Pirzada plays a news anchor who takes himself way too seriously — all about "saving journalism" until Bae shows up and basically tells him to chill out. There's a great scene where she literally cools him down by teaching him how to swim.</p>
+      <p>Vir Das plays a parody of a very famous prime-time news anchor, which felt like Bollywood's cheeky way of settling a few old grudges — pretty funny to watch. Lisa Mishra and Muskan Jaaferi both did a fantastic job; Vihaan Samat and Varun Sood were just okay.</p>
+
+      <h3 class="sub">The Cliffhanger</h3>
+      <p>Just as Bae starts to stand on her own feet and make a name for herself, guess who shows up? Her husband. Right when things are getting complicated. The problem: Bae is now in love with Neel. Classic crossroads where the past meets the future.</p>
+
+      <hr class="rule">
+
+      <p>Is it a masterpiece? Maybe not. But is it a fun, believable ride into a world we usually only see in magazines?</p>
+      <blockquote class="kill-shot">Absolutely. If you want something that celebrates being yourself, even if you're a bit extra — give it a watch.</blockquote>
+    </div>
+    <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-17";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-17";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
+  </main>
+
+  <footer class="site-foot">Talks about self worth and emotional clarity</footer>
+</div>
+</body>
+</html>

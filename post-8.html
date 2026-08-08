@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Can We Admit It? The Mascara-Lash Extension Industrial Complex Is A Scam — What's in Heart</title>
+<title>Can We Admit It? The Mascara-Lash Extension Industrial Complex Is A Scam — Heart Talks</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,17 +14,30 @@
     <h1>Heart Talks</h1>
     <p>Exploring the quite, complicated parts of being human</p>
     <nav class="site-nav">
-      <a href="index.html" class="current">Entries</a>
+      <a href="index.html">Entries</a>
       <a href="about.html">About</a>
     </nav>
   </header>
+
+  <nav class="genre-nav">
+      <a class="genre-pill" href="index.html">All</a>
+      <a class="genre-pill" href="index.html#sec-self-improvement">Self Improvement</a>
+      <a class="genre-pill" href="index.html#sec-feminism">Feminism</a>
+      <a class="genre-pill active" href="index.html#sec-beauty">Beauty</a>
+      <a class="genre-pill" href="index.html#sec-pop-culture">Pop Culture</a>
+      <a class="genre-pill" href="index.html#sec-fashion">Fashion</a>
+      <a class="genre-pill" href="index.html#sec-food">Food</a>
+      <a class="genre-pill" href="index.html#sec-health">Health</a>
+      <a class="genre-pill" href="index.html#sec-career">Career</a>
+      <a class="genre-pill" href="index.html#sec-life">Life</a>
+  </nav>
 
   <main class="page">
     <div class="stamp">
       <div class="stamp-inner"><b>Jun 06</b>2026</div>
     </div>
     <a class="back-link" href="index.html">← All entries</a>
-    <div class="entry-meta">Entry No. 8</div>
+    <div class="entry-meta">Entry No. 8 · <a href="index.html?genre=Beauty" style="color:inherit;">Beauty</a></div>
     <div class="entry">
       <h1 class="post-title">Can We Admit It? The Mascara-Lash Extension Industrial Complex Is A Scam.</h1>
       <p class="dek">I can't be the only one done. Done with "clean girl" mascara that looks like you cried in the rain. Done pretending this is self-care.</p>
@@ -80,7 +93,7 @@
 <script>
     var disqus_config = function () {
         this.page.url = window.location.href;
-        this.page.identifier = "post-1";
+        this.page.identifier = "post-8";
     };
     (function() {
         var d = document, s = d.createElement('script');
@@ -106,7 +119,7 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
-  const postId = "post-1";
+  const postId = "post-8";
   const likeRef = ref(db, "likes/" + postId);
 
   onValue(likeRef, (snap) => {
