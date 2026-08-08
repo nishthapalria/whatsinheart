@@ -64,6 +64,53 @@
       <p>The people who matter don't care. The ones who do? They're still wearing flattering tunics in 90-degree weather. Let them sweat.</p>
       <p>You've got a life to live. Dress like it.</p>
     </div>
+     <div class="engagement">
+  <button id="like-btn">🤍 Like <span id="like-count">0</span></button>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = "post-1";
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hearttalks.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMJyvYiewuypCRIYhRinYCkte3AKz6ALU",
+    authDomain: "hearttalks-a2824.firebaseapp.com",
+    databaseURL: "https://hearttalks-a2824-default-rtdb.firebaseio.com",
+    projectId: "hearttalks-a2824",
+    storageBucket: "hearttalks-a2824.firebasestorage.app",
+    messagingSenderId: "701318493139",
+    appId: "1:701318493139:web:2db42d8e245317a8b1b526"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const postId = "post-1";
+  const likeRef = ref(db, "likes/" + postId);
+
+  onValue(likeRef, (snap) => {
+    document.getElementById("like-count").textContent = snap.val() || 0;
+  });
+
+  document.getElementById("like-btn").addEventListener("click", () => {
+    if (localStorage.getItem("liked_" + postId)) return;
+    runTransaction(likeRef, (current) => (current || 0) + 1);
+    localStorage.setItem("liked_" + postId, "true");
+  });
+</script>
   </main>
 
   <footer class="site-foot">Talks about self worth and emotional clarity</footer>
