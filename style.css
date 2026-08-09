@@ -194,7 +194,9 @@ body.home .sky { max-width: 1160px; }
   line-height: 1.5;
 }
 .entry p { margin: 0 0 24px; font-size: 1.09rem; }
-.entry p:first-of-type::first-letter {
+/* Drop cap on the actual opening line of the article — not the italic dek above it */
+.entry .dek + p::first-letter,
+.entry > p:first-child:not(.dek)::first-letter {
   font-family: var(--display);
   font-weight: 400;
   font-style: italic;
@@ -243,6 +245,13 @@ body.home .sky { max-width: 1160px; }
   color: var(--ink);
   letter-spacing: -0.01em;
 }
+@media (min-width: 860px) {
+  .entry blockquote.kill-shot {
+    margin-left: -40px;
+    margin-right: -40px;
+    font-size: 1.85rem;
+  }
+}
 
 hr.rule { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
 
@@ -289,6 +298,22 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
 }
 .section-head h2::before { content: none; }
 
+/* Editorial numbering on genre sections — purely visual, generated via CSS counters */
+.page.mag { counter-reset: section; }
+.genre-section { counter-increment: section; }
+.genre-section .section-head h2::before {
+  content: counter(section, decimal-leading-zero);
+  display: inline-block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
 .trending-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 46px; margin: 0 0 8px; }
 .trending-card {
   display: block; background: transparent; border: none; border-top: 1px solid var(--line-strong);
@@ -332,6 +357,34 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
 .trending-strip .trending-card:nth-child(2) .tag,
 .trending-strip .trending-card:nth-child(3) .tag { color: #5C6B4F; }
 
-/* first feature block on homepage — larger, quieter */
-#top > .entry-meta { padding-right: 0; }
+/* first feature block on homepage — a true lead-story spread, not just a bigger card */
+#top > .entry-meta {
+  padding-right: 0;
+  font-size: 0.72rem;
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line-strong);
+}
 #top .entry h2 { font-size: clamp(2.6rem, 6.4vw, 4.2rem); }
+
+@media (min-width: 860px) {
+  #top .entry {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    column-gap: 64px;
+    row-gap: 12px;
+    align-items: start;
+  }
+  #top .entry > h2 { grid-column: 1; grid-row: 1; }
+  #top .entry > p.dek { grid-column: 1; grid-row: 2; margin-bottom: 0; }
+  #top .entry > p.dek + p {
+    grid-column: 2; grid-row: 1;
+    font-family: var(--body);
+    font-style: normal;
+    font-size: 1.05rem;
+    color: var(--text-soft);
+    margin: 0;
+  }
+  #top .entry > p.dek + p::first-letter { all: unset; }
+  #top .entry > p:last-child { grid-column: 2; grid-row: 2; align-self: start; }
+}
